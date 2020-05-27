@@ -1,0 +1,1 @@
+App + Sistema SMS para saber tempo e localização dos autocarros referentes à paragem em que estamos
