@@ -1,0 +1,31 @@
+Sistema para se poder realizar provas de Trail, BTT, Ciclismo, Atletismo de uma forma mais segura agora com a pandemia.
+
+- A pessoa pode fazer uma distancia pre estabelecida antes (10km, 25km ...)
+- A pessoa realizar um circuito já marcado no terreno ou pelo track
+
+- Colocar o tempo que realizaçou na plataforma
+- Tipos de dados inseridos
+-- Simples só o tempo e a distancia
+-- Ficheiros do GPS (garmim, ...)
+-- Colocação de partida e chegada atraves de "portico criado para o efeito"
+--- Exemplo ser criado um poste de control na Torre da guarda para a partida e um poste de control na central de camionhagem para a chegada
+---- Pode ser utilizado por exemplo cartões RFID que seram enviado por correio para o atleta ou ser levantado num certo sitio
+----- O mesmo pode servir para diversas provas
+---- Pode ser utilizado QRCode para atraves da aplicação o atleta fazer o registo da partida e chegada
+---- Pode ser só atraves da aplicação onde é verificado a localicação gps e começa a contar a prova e a chegada é verificada pelo gps
+
+
+-- Durante a prova na aplicação pode ser enviados informações para o atleta como esta a a correr a prova do mesmo
+--- Tipo dicas para o seu objectivo tem de correr mais rapido ou mais devagar
+
+
+- Tempo de duração
+-- Em vez do normal ter por exemplo 1 semana a prova a correr
+--- Para não haver tanta gente em prova em mesmo tempo
+--- Haver um registo de hora em hora e no maximo por exemplo sairem(registarem) só 10 pessoas
+
+- Criação de varios circuitos por exemplo na guarda e haver um plano de "treinos"/"competição" por mes
+-- Está actividade podia ser um mini campeonato por exemplo organizado pela camara ou IPG
+--- Inscrições gratis ou um valor que reverta para uma area social
+--- Haver uma tabela de classificações
+--- Existir um kit de atleta
