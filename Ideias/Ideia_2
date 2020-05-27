@@ -17,6 +17,7 @@ Sistema para se poder realizar provas de Trail, BTT, Ciclismo, Atletismo de uma 
 
 -- Durante a prova na aplicação pode ser enviados informações para o atleta como esta a a correr a prova do mesmo
 --- Tipo dicas para o seu objectivo tem de correr mais rapido ou mais devagar
+--- Avisos de areas perigosas (passagem de estrada, descida acentuada)
 
 
 - Tempo de duração
@@ -29,3 +30,14 @@ Sistema para se poder realizar provas de Trail, BTT, Ciclismo, Atletismo de uma 
 --- Inscrições gratis ou um valor que reverta para uma area social
 --- Haver uma tabela de classificações
 --- Existir um kit de atleta
+
+- Plano de Treinos
+-- Em vez de ser uma prova, ser varios exercicios por exemplo para o grupo senior do IPG
+--- Caminhada X, .....
+-- Plano de treinos com objectivos para os atletas
+--- Hoje fazer 5km a correr
+--- Amanha caminhada 10km ....
+
+- Ter pontos intermedios(torres) pelo circuito
+-- para control dos atletas
+
