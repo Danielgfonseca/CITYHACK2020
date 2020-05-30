@@ -1,0 +1,43 @@
+Ideia_3
+
+Área: Saúde de qualidade
+
+-Chatbots que facilitem processos de rastreio e possam contribuir para melhorar a qualidade dos serviços prestados aos pacientes 
+-Apps que possam reduzir custos associados à prestação de cuidados médicos 
+-Jogos que promovam estilos de vida mais saudáveis 
+
+Ideia:
+
+Saúde dos Idosos
+Objetivo: Exercicios em casa
+
+-Caixa com contéudos
+-Juntas de freguesia
+-Tablet?
+-Como guardar os dados de atividades?
+-Tensão arterias e glicémia?
+
+O porque desta ideia?
+-Para um idoso ter um estilo de vida saudável é necessário a prática de exercicio físico regular. 
+Em tempos normais, os idosos deslocavam-se ao Politécnico em programas de idosos e iam ao ginásio ou faziam atividades ao ar livre.
+No entanto, há pessoas que vivem em aldeias em que a deslocação é mais dificil, e em tempos de COVID não é possível o ajuntamento nem
+que seja em juntas de freguesia. 
+
+Deste modo, surgiu a ideia de os idodos poderem fazer o seu exercicio através de sua casa. Como?
+-Os idosos não têm smartphone, nem mesmo ligação á internet. Mas têm televisão a maior parte.
+
+Então, a ideia seria fazer chegar ao idoso uma caixa de conteúdos, esta seria ligada á sua televisão, e através de um joystick
+o idoso poder escolher entre Exercicios, Alivio de dores, Comida Saudável, Jogos...
+
+Antes de cada exercicio ou depois seria pedida a medição da tensão arterial e registada?
+Depois do exercicio seria guardado o gráu de satisfação, cansaço fisico, dificuldade...
+
+1 vez por mês, ou de 2 em 2 meses. A junta de freguesia iria a casa do idoso, ver como ele está, fazer um questionário e actualizar
+o sistema com novos contéudos á medida do idoso em questão.
+
+
+Problemas aqui?
+-Ligação de um raspberry pi a diferentes tipos de televisões. Alternativa -> Um tablet?
+Preços ?
+
+ 
