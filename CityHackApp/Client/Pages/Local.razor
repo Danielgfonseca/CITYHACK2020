@@ -1,0 +1,179 @@
+@page "/local/{Nome}"
+
+@using Syncfusion.Blazor.Maps
+@using Syncfusion.Blazor.Cards
+@using Syncfusion.Blazor.Buttons
+
+<h1>@Nome</h1>
+
+<div class="control-section">
+    <div>
+        <SfMaps ModelType="@typeof(IDataTemplate)">
+            <MapsCenterPosition Latitude=40.7209 Longitude=-73.9680></MapsCenterPosition>
+            <MapsZoomSettings Enable="false" ZoomFactor=12></MapsZoomSettings>
+            <MapsLayers>
+                <MapsLayer LayerType="ShapeLayerType.OSM" AnimationDuration=0>
+                    <MapsMarkerSettings>
+                        <MapsMarker Visible="true" DataSource="@MarkerDatas">
+                            <ChildContent>
+                                <MapsMarkerTooltipSettings Visible="true" ValuePath="name"></MapsMarkerTooltipSettings>
+                            </ChildContent>
+                            <MarkerTemplate>
+                                @{
+                                    var data = context as IDataTemplate;
+                                    <div>
+                                        <img class="markerTemplate" style="margin-top:-10px;margin-left:-10px;" src="styles/images/maps/ballon.png" />                                        
+                                    </div>
+                                }
+                            </MarkerTemplate>
+                        </MapsMarker>
+                    </MapsMarkerSettings>
+                </MapsLayer>
+            </MapsLayers>
+        </SfMaps>
+    </div>
+</div>
+
+
+
+<div class="col-lg-12 control-section card-control-section">
+    <div class="row card-layout">
+        <div class="col-lg-12 col-md-12">
+            <SfCard Orientation="CardOrientation.Horizontal" ID="Trimmer">
+                <CardStacked>
+                    <CardHeader Title="Treino 1" />
+                    <CardContent Content="Tem xxx exercicio sdfasdfasdfas adsfdsf asdf asdf asdf asd fas" />
+                    <CardFooter>
+                        <CardFooterContent>
+                            <a href="/local/@Nome/Treino1">
+                                <SfButton CssClass="e-outline">Ver</SfButton>
+                            </a>
+                        </CardFooterContent>
+                    </CardFooter>
+                </CardStacked>
+                <img src="//ej2.syncfusion.com/demos/src/card/images/Trimmer.png">
+            </SfCard>
+            <SfCard Orientation="CardOrientation.Horizontal" ID="Camera">
+                <img src="//ej2.syncfusion.com/demos/src/card/images/Camera.png">
+                <CardStacked>
+                    <CardHeader Title="Treino 2" />
+                    <CardContent Content="The fastest 135mm telephoto lens in its class. Two UD-glass elements correct secondary spectrum for outstanding sharpness and color." />
+                    <CardFooter>
+                        <CardFooterContent>
+                            <a href="/local/@Nome/Treino2">
+                                <SfButton CssClass="e-outline">Ver</SfButton>
+                            </a>
+                        </CardFooterContent>
+                    </CardFooter>
+                </CardStacked>
+            </SfCard>
+            <SfCard Orientation="CardOrientation.Horizontal" ID="Trimmer">
+                <CardStacked>
+                    <CardHeader Title="Treino 3" />
+                    <CardContent Content="Tem xxx exercicio sdfasdfasdfas adsfdsf asdf asdf asdf asd fas" />
+                    <CardFooter>
+                        <CardFooterContent>
+                            <a href="/local/@Nome/Treino3">
+                                <SfButton CssClass="e-outline">Ver</SfButton>
+                            </a>
+                        </CardFooterContent>
+                    </CardFooter>
+                </CardStacked>
+                <img src="//ej2.syncfusion.com/demos/src/card/images/Trimmer.png">
+            </SfCard>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@code {
+    [Parameter]
+    public string Nome { get; set; }
+    public class MarkerData
+    {
+        public string name;
+        public double latitude;
+        public double longitude;
+    }
+    public List<MarkerData> MarkerDatas = new List<MarkerData> {
+        new MarkerData { name= "Manhattan, New York, USA",  latitude= 40.7488758, longitude= -73.9730091 }
+    };
+}
+
+<style>
+    .markerTemplate {
+        height: 30px;
+        width: 20px;
+        display: block;
+        margin: auto;
+        font-size: 14px;
+    }
+    #popuposm_dialog-content {
+        display: none !important
+    }
+    #popuposm_title {
+        font-size: 14px !important
+    }
+    .osmpopup {
+        position: relative;
+        background-color: white;
+    }
+        .osmpopup:after {
+            content: "";
+            position: absolute;
+            top: 170%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -35px;
+            border-top: solid 20px white;
+            border-left: solid 20px transparent;
+            border-right: solid 20px transparent;
+        }
+    #osmdialog .e-popup {
+        min-width: 100px !important
+    }
+
+
+
+
+    #Phone .e-card-stacked {
+        justify-content: flex-start;
+    }
+    .e-card .e-card-header .e-card-header-caption .e-card-header-title{
+        font-size: 14px;
+        font-family: Helvetica, 'Segoe UI';
+        font-weight: bold;
+    }   
+    #Trimmer {
+        height: 175px;
+    }
+    #Camera .e-card-content{
+        padding-top: 0px;
+    }
+    #Trimmer .e-card-content{
+        padding-top: 0px;
+    }
+    #Camera{
+        height: 175px;
+    }
+    .card-layout{
+        max-width: 850px;
+        margin: auto;
+    }
+    .e-card.e-card-horizontal img {
+        margin: 0px;
+        width: 50%
+    }
+    .e-card{
+        margin: 7px;
+    }
+    .card-control-section .e-card.e-card-horizontal.e-product .e-card-stacked > :first-child,
+    .card-control-section .e-card.e-card-horizontal .e-card-stacked > :first-child,
+    .card-control-section .e-card.e-card-horizontal .e-card-stacked > :first-child {
+        flex-grow: 0;
+    }
+</style>

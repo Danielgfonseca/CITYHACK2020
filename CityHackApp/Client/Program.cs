@@ -1,13 +1,10 @@
 using System;
 using System.Net.Http;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Text;
 using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using Syncfusion.Blazor;
 
 namespace CityHackApp.Client
 {
@@ -15,8 +12,12 @@ namespace CityHackApp.Client
     {
         public static async Task Main(string[] args)
         {
+            //Register Syncfusion license 
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjI2NzA1QDMxMzgyZTMxMmUzMGdMMVlRMlJibG8xRStYRHJTbUgwRGtURlprNTlFVldidEk0Z3RaNThheFk9"); 
+
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
+            builder.Services.AddSyncfusionBlazor();
 
             builder.Services.AddHttpClient("CityHackApp.ServerAPI", client => client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress))
                 .AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
