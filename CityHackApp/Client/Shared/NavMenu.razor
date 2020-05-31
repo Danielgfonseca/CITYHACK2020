@@ -1,4 +1,11 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">CityHackApp</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -37,6 +44,18 @@
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Historico
             </NavLink>
         </li>
+        <li class="nav-item px-3">
+            <AuthorizeView>
+                <Authorized>
+                    <a href="authentication/profile">Ola, @context.User.Identity.Name!</a>
+                    <button class="nav-link btn btn-link" @onclick="BeginSignOut">Log out</button>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="authentication/register">Registar</a>
+                    <a href="authentication/login">Log in</a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </li>
     </ul>
 </div>
 
@@ -48,5 +67,11 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
     }
 }
